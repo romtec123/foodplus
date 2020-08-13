@@ -17,7 +17,7 @@ end
 function ENT:Use(ply)
 	if ply:Health() == ply:GetMaxHealth() then return end 
 	ply:SetHealth(ply:Health() + 5)
-	ply:EmitSound(Sound("foodplus/nom".. math.random(1,5) .. ".wav"), 100, math.random(70,130))
+	ply:EmitSound(Sound("foodplus/nom".. math.random(1,5) .. ".wav"), 100, math.random(90,110))
 	if ply:Health() > ply:GetMaxHealth() then ply:SetHealth(ply:GetMaxHealth()) end
 	self:Remove()
 end
